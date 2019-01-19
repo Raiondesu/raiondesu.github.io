@@ -7,18 +7,30 @@
     <title>Hajimemashite. Raion desu. Douzo yoroshiku.</title>
     <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/19854420" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script>
-    </script>
   </head>
 
   <body>
-    <main class="placeholder shown">
+    <main class="placeholder">
       <h1>Hello there</h1>
       <h2>I am Alexey Iskhakov</h2>
-      <div class="aka"><span>aka </span><a href="httdivs://github.com/Raiondesu">Raiondesu</a></div>
+      <div class="aka"><span>aka </span><a href="https://github.com/Raiondesu">Raiondesu</a></div>
 
       <p class="promise">My portfolio will soon rest here.</p>
     </main>
 
+    <script>
+      function show() {
+        setTimeout(() => {
+          document.querySelector('main').classList.add('shown');
+        }, 1000);
+      }
+
+      if (document.readyState === 'complete') {
+        show();
+      } else {
+        window.addEventListener('load', show);
+      }
+
+    </script>
   </body>
 </html>

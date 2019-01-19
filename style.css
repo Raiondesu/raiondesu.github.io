@@ -37,24 +37,25 @@ body {
 .placeholder h1 {
   font-weight: 100;
   font-size: 10rem;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
 }
 .placeholder h2 {
   font-weight: 200;
   font-size: 3rem;
-  transition: opacity 1s 0.5s ease;
+  transition: opacity 2s 0.5s ease;
 }
 .placeholder .aka * {
   font-weight: 300;
   font-size: 1.25rem;
+  transition: opacity 2s 2s ease;
 }
 .placeholder a {
   color: white;
   text-decoration: none;
-  transition: opacity 2s 0.5s ease;
+  transition: opacity 3s 3.5s ease;
 }
 .placeholder .promise {
-  transition: opacity 2s 0.5s ease;
+  transition: opacity 3s 4s ease;
 }
 .placeholder.shown a:hover {
   opacity: 1;
