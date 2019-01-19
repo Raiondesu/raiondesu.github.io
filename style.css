@@ -18,7 +18,6 @@ body {
 
 * {
   font-family: 'Titillium Web', sans-serif !important;
-  font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
