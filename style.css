@@ -78,6 +78,40 @@ body {
   opacity: 0.9;
 }
 
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 7px;
+  }
+
+  .placeholder h2 {
+    font-weight: 200;
+    font-size: 5rem;
+    transition: opacity 1s 0.5s ease;
+  }
+  .placeholder .aka * {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  .placeholder.shown .promise {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%
