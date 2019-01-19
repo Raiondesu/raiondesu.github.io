@@ -20,6 +20,7 @@ body {
   font-family: 'Titillium Web', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  user-select: none !important;
 }
 
 .placeholder {
@@ -43,10 +44,14 @@ body {
   font-size: 3rem;
   transition: opacity 2s 0.5s ease;
 }
+.placeholder .aka {
+  transition: opacity 2s 2s ease;
+}
 .placeholder .aka * {
   font-weight: 300;
   font-size: 1.25rem;
-  transition: opacity 2s 2s ease;
+  opacity: 0.6;
+  transition: opacity .2s ease;
 }
 .placeholder a {
   color: white;
@@ -70,9 +75,6 @@ body {
 }
 .placeholder.shown .aka {
   opacity: 1;
-}
-.placeholder.shown .aka * {
-  opacity: 0.6;
 }
 .placeholder.shown .promise {
   opacity: 0.9;
