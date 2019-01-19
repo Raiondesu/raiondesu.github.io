@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,300,300i,400,400i,600,700&subset=latin-ext');
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #003a47, #2e0054);
+  background-size: 400% 400%;
+  color: white;
+
+  -webkit-animation: Gradient 0s ease infinite;
+  -moz-animation: Gradient 0s ease infinite;
+  -o-animation: Gradient 0s ease infinite;
+  animation: Gradient 0s ease infinite;
+  display: table;
+}
+
+* {
+  font-family: 'Titillium Web', sans-serif !important;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.placeholder {
+  display: table-cell;
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.placeholder * {
+  margin: 0;
+  opacity: 0;
+}
+.placeholder h1 {
+  font-weight: 100;
+  font-size: 10rem;
+  transition: opacity 0.5s ease;
+}
+.placeholder h2 {
+  font-weight: 200;
+  font-size: 3rem;
+  transition: opacity 1s 0.5s ease;
+}
+.placeholder .aka * {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+.placeholder a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 2s 0.5s ease;
+}
+.placeholder .promise {
+  transition: opacity 2s 0.5s ease;
+}
+.placeholder.shown a:hover {
+  opacity: 1;
+}
+.placeholder a:visited {
+  color: white;
+}
+.placeholder.shown h1 {
+  opacity: 0.9;
+}
+.placeholder.shown h2 {
+  opacity: 0.6;
+}
+.placeholder.shown .aka {
+  opacity: 1;
+}
+.placeholder.shown .aka * {
+  opacity: 0.6;
+}
+.placeholder.shown .promise {
+  opacity: 0.9;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-o-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
