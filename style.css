@@ -5,7 +5,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, #003a47, #2e0054);
+  background: linear-gradient(0, #2e0054, #003a47);
   background-size: 400% 400%;
   color: white;
 
@@ -117,7 +117,7 @@ body {
 @-webkit-keyframes Gradient {
   0% {
       background-size: 400% 400%;
-      background-position-y: bottom;
+      background-position-y: top;
   }
   50% {
       background-size: 100% 100%;
@@ -125,14 +125,14 @@ body {
   }
   100% {
       background-size: 400% 400%;
-      background-position-y: top;
+      background-position-y: center;
   }
 }
 
 @-moz-keyframes Gradient {
   0% {
       background-size: 400% 400%;
-      background-position-y: bottom;
+      background-position-y: top;
   }
   50% {
       background-size: 100% 100%;
@@ -140,14 +140,14 @@ body {
   }
   100% {
       background-size: 400% 400%;
-      background-position-y: top;
+      background-position-y: center;
   }
 }
 
 @-o-keyframes Gradient {
   0% {
       background-size: 400% 400%;
-      background-position-y: bottom;
+      background-position-y: top;
   }
   50% {
       background-size: 100% 100%;
@@ -155,14 +155,14 @@ body {
   }
   100% {
       background-size: 400% 400%;
-      background-position-y: top;
+      background-position-y: center;
   }
 }
 
 @keyframes Gradient {
   0% {
       background-size: 400% 400%;
-      background-position-y: bottom;
+      background-position-y: top;
   }
   50% {
       background-size: 100% 100%;
@@ -170,6 +170,6 @@ body {
   }
   100% {
       background-size: 400% 400%;
-      background-position-y: top;
+      background-position-y: center;
   }
 }
