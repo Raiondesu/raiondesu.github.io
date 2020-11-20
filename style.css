@@ -9,10 +9,10 @@ body {
   background-size: 400% 400%;
   color: white;
 
-  -webkit-animation: Gradient 0s ease infinite;
-  -moz-animation: Gradient 0s ease infinite;
-  -o-animation: Gradient 0s ease infinite;
-  animation: Gradient 0s ease infinite;
+  -webkit-animation: Gradient 10s ease infinite alternate;
+  -moz-animation: Gradient 10s ease infinite alternate;
+  -o-animation: Gradient 10s ease infinite alternate;
+  animation: Gradient 10s ease infinite alternate;
   display: table;
 }
 
@@ -116,56 +116,60 @@ body {
 
 @-webkit-keyframes Gradient {
   0% {
-    background-position: 0% 50%
+      background-size: 400% 400%;
+      background-position-y: bottom;
   }
-
   50% {
-    background-position: 100% 50%
+      background-size: 100% 100%;
+      background-position-y: center;
   }
-
   100% {
-    background-position: 0% 50%
+      background-size: 400% 400%;
+      background-position-y: top;
   }
 }
 
 @-moz-keyframes Gradient {
   0% {
-    background-position: 0% 50%
+      background-size: 400% 400%;
+      background-position-y: bottom;
   }
-
   50% {
-    background-position: 100% 50%
+      background-size: 100% 100%;
+      background-position-y: center;
   }
-
   100% {
-    background-position: 0% 50%
+      background-size: 400% 400%;
+      background-position-y: top;
   }
 }
 
 @-o-keyframes Gradient {
   0% {
-    background-position: 0% 50%
+      background-size: 400% 400%;
+      background-position-y: bottom;
   }
-
   50% {
-    background-position: 100% 50%
+      background-size: 100% 100%;
+      background-position-y: center;
   }
-
   100% {
-    background-position: 0% 50%
+      background-size: 400% 400%;
+      background-position-y: top;
   }
 }
 
 @keyframes Gradient {
   0% {
-    background-position: 0% 50%
+      background-size: 400% 400%;
+      background-position-y: bottom;
   }
-
   50% {
-    background-position: 100% 50%
+      background-size: 100% 100%;
+      background-position-y: center;
   }
-
   100% {
-    background-position: 0% 50%
+      background-size: 400% 400%;
+      background-position-y: top;
   }
 }
