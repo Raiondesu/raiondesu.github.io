@@ -19,6 +19,15 @@
         --color-accent: #a65954;
         --color-title-text: #252525;
         --color-background: #ebeaec;
+
+        --size-h1: 2.5rem;
+        --size-h2: 1.5rem;
+        --size-h3: 1.5rem;
+        --size-contacts: 1.125rem;
+        --size-h4: 1rem;
+        --size-text: 0.875rem;
+
+        --size-avatar: 6rem;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -45,84 +54,120 @@
         margin: 0;
         padding: 0;
         background: var(--color-background);
-        background-size: 400% 400%;
         color: var(--color-text);
 
-        display: table;
+        display: flex;
+        justify-content: center;
       }
 
       main {
-        display: table-cell;
-        text-align: center;
-        margin: 0 auto;
+        flex-grow: 1;
+        max-width: 1024px;
         padding: 64px;
-        vertical-align: middle;
       }
 
       main * {
         margin: 0;
       }
 
+      main > :not(:last-child) {
+        margin-bottom: 64px;
+      }
+
+      a {
+        color: var(--color-text);
+      }
+
+      h1 {
+        font-weight: 600;
+        font-size: var(--size-h1);
+        color: var(--color-title-text);
+        line-height: var(--size-h1);
+        margin-bottom: 0.75rem;
+        opacity: 1;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: var(--size-h2);
+        line-height: var(--size-h2);
+        letter-spacing: 0.27em;
+        opacity: var(--opacity-paragraph);
+      }
+
+      h3 {
+        font-weight: 500;
+        font-size: var(--size-h3);
+        line-height: var(--size-h3);
+      }
+
       .intro {
         width: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        margin-bottom: 4rem;
+        gap: 2rem;
+      }
+
+      .title {
+        display: flex;
+        flex-grow: 1;
       }
 
       .name {
         text-align: left;
+        flex-grow: 1;
       }
 
       .links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 0.5rem;
+
         text-align: right;
-        align-self: flex-end;
-        margin-bottom: 4px;
       }
+
       .links * {
-        color: var(--color-text);
+        font-size: var(--size-contacts);
+        line-height: var(--size-contacts);
       }
 
       .name * {
         text-transform: uppercase;
       }
 
-      .name h1 {
-        font-weight: 600;
-        font-size: 3rem;
-        color: var(--color-title-text);
-        opacity: 1;
-      }
-
-      .name h2 {
-        font-weight: 400;
-        font-size: 1.5rem;
-        line-height: 18px;
-        letter-spacing: 0.27em;
-        opacity: var(--opacity-paragraph);
-      }
-
       .avatar {
         border-radius: 100%;
-        width: 6.375rem;
-        height: 6.375rem;
+        width: var(--size-avatar);
+        height: var(--size-avatar);
+      }
+
+      .divider {
+        height: 1px;
+        background-color: var(--color-underline);
+        width: 100%;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
       }
 
       @media screen and (max-width: 1200px) {
         html {
           font-size: 10px;
         }
+
+        main {
+          max-width: 100vw;
+        }
       }
 
       @media screen and (max-width: 700px) {
         html {
           font-size: 7px;
-        }
-
-        main h2 {
-          font-weight: 200;
-          font-size: 5rem;
-          transition: opacity 1s 0.5s ease;
         }
 
         main {
@@ -149,18 +194,44 @@
   <body>
     <main>
       <section class="intro">
-        <div style="display: flex; gap: 2rem;">
-          <img class="avatar" src="https://avatars2.githubusercontent.com/u/19854420" alt="Avatar"/>
+        <img class="avatar" src="https://avatars2.githubusercontent.com/u/19854420" alt="Avatar"/>
+        <div class="title">
           <div class="name">
             <h1>Alexey Iskhakov</h1>
             <h2>Front-End Engineer</h2>
           </div>
+          <div class="links">
+            <a href="https://github.com/raiondesu">github.com/raiondesu</a>
+            <a href="mailto:raiondesu.dev@proton.me">raiondesu.dev@proton.me</a>
+          </div>
         </div>
-        <div class="links">
-          <a href="https://github.com/raiondesu">github.com/raiondesu</a>
-          <br>
-          <a href="mailto:raiondesu.dev@proton.me">raiondesu.dev@proton.me</a>
-        </div>
+      </section>
+      <div class="divider"></div>
+      <section class="info">
+        <picture>
+          <source
+            srcset="https://github-readme-stats.vercel.app/api?username=Raiondesu&hide_border=true&count_private=true&show_icons=true&custom_title=GitHub&nbsp;Stats&icon_color=58a6ff&text_color=aaa&theme=transparent"
+            media="(prefers-color-scheme: dark)"
+          />
+          <source
+            srcset="https://github-readme-stats.vercel.app/api?username=Raiondesu&hide_border=true&count_private=true&custom_title=GitHub&nbsp;Stats&icon_color=58a6ff&show_icons=true&text_color=333333&theme=transparent"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          />
+          <img src="https://github-readme-stats.vercel.app/api?username=Raiondesu&hide_border=true&count_private=true&custom_title=GitHub&nbsp;Stats&icon_color=58a6ff&show_icons=true&text_color=333333&theme=transparent" />
+        </picture>
+
+        <picture>
+          <source
+            srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Raiondesu&layout=compact&hide_border=true&count_private=true&show_icons=true&icon_color=58a6ff&text_color=aaa&title_color=aaa&theme=transparent"
+            media="(prefers-color-scheme: dark)"
+          />
+          <source
+            srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Raiondesu&layout=compact&hide_border=true&count_private=true&icon_color=58a6ff&show_icons=true&text_color=333333&theme=transparent"
+            media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          />
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Raiondesu&layout=compact&hide_border=true&count_private=true&icon_color=58a6ff&show_icons=true&text_color=333333&theme=transparent" />
+        </picture>
+
       </section>
     </main>
 
@@ -177,10 +248,10 @@
         window.addEventListener('load', show);
       }
 
-      console.log('%cOhh, look who\'s there!', 'font-family:\'Titillium Web\', sans-serif;color: #003a47');
+      console.log('%cOhh, look who\'s there!', 'font-family:\'Titillium Web\', sans-serif');
       console.log(
         '%cSince you\'ve opened the console,\nI think you really need to see this:\n%chttps://github.com/Raiondesu',
-        'font-family:\'Titillium Web\', sans-serif;font-size:1rem;color: #003a47',
+        'font-family:\'Titillium Web\', sans-serif;font-size:1rem',
         'font-family:\'Titillium Web\', sans-serif;font-size:1rem'
       );
     </script>
