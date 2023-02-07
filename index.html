@@ -4,18 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hajimemashite. Raion desu. Douzo yoroshiku.</title>
+    <title>Raiondesu</title>
+    <meta name="description" content="Alexey Iskhakov | Front-End Engineer | a.k.a. Raiondesu">
     <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/19854420" type="image/x-icon">
-    <link rel="stylesheet" href="style.css?777">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap&subset=latin-ext');
+
+      :root {
+        --color-underline: #aeaeae;
+        --color-text: #333333;
+        --opacity-paragraph: 0.75;
+        --color-badge-bg: #cecece;
+        --color-accent: #a65954;
+        --color-title-text: #252525;
+        --color-background: #ebeaec;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-underline: #515151;
+          --color-text: #333333;
+          --color-badge-bg: #313131;
+          --color-accent: #58A5AB;
+          --color-title-text: #DADADA;
+          --color-background: #141513;
+          --color-text: #CCCCCC;
+        }
+      }
+
+      * {
+        font-family: 'Poppins', sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: var(--color-background);
+        background-size: 400% 400%;
+        color: var(--color-text);
+
+        display: table;
+      }
+
+      main {
+        display: table-cell;
+        text-align: center;
+        margin: 0 auto;
+        padding: 64px;
+        vertical-align: middle;
+      }
+
+      main * {
+        margin: 0;
+      }
+
+      .intro {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .name {
+        text-align: left;
+      }
+
+      .links {
+        text-align: right;
+        align-self: flex-end;
+        margin-bottom: 4px;
+      }
+      .links * {
+        color: var(--color-text);
+      }
+
+      .name * {
+        text-transform: uppercase;
+      }
+
+      .name h1 {
+        font-weight: 600;
+        font-size: 3rem;
+        color: var(--color-title-text);
+        opacity: 1;
+      }
+
+      .name h2 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 18px;
+        letter-spacing: 0.27em;
+        opacity: var(--opacity-paragraph);
+      }
+
+      .avatar {
+        border-radius: 100%;
+        width: 6.375rem;
+        height: 6.375rem;
+      }
+
+      @media screen and (max-width: 1200px) {
+        html {
+          font-size: 10px;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        html {
+          font-size: 7px;
+        }
+
+        main h2 {
+          font-weight: 200;
+          font-size: 5rem;
+          transition: opacity 1s 0.5s ease;
+        }
+
+        main {
+          padding: 32px;
+        }
+      }
+
+      @media screen and (max-width: 432px) {
+        html {
+          font-size: 2vw;
+        }
+
+        main {
+          padding: 16px;
+        }
+
+        .avatar {
+          display: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <main class="placeholder">
-      <h1>Hello there</h1>
-      <h2>I am Alexey Iskhakov</h2>
-      <div class="aka"><span>aka </span><a id="link" href="https://github.com/Raiondesu">Raiondesu</a></div>
-
-      <p class="promise">My portfolio will soon rest here.</p>
+    <main>
+      <section class="intro">
+        <div style="display: flex; gap: 2rem;">
+          <img class="avatar" src="https://avatars2.githubusercontent.com/u/19854420" alt="Avatar"/>
+          <div class="name">
+            <h1>Alexey Iskhakov</h1>
+            <h2>Front-End Engineer</h2>
+          </div>
+        </div>
+        <div class="links">
+          <a href="https://github.com/raiondesu">github.com/raiondesu</a>
+          <br>
+          <a href="mailto:raiondesu.dev@proton.me">raiondesu.dev@proton.me</a>
+        </div>
+      </section>
     </main>
 
     <script>
