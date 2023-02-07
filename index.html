@@ -28,6 +28,8 @@
         --size-text: 0.875rem;
 
         --size-avatar: 6rem;
+
+        --content-padding: 4rem;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -63,7 +65,7 @@
       main {
         flex-grow: 1;
         max-width: 1024px;
-        padding: 64px;
+        padding: var(--content-padding);
       }
 
       main * {
@@ -71,7 +73,7 @@
       }
 
       main > :not(:last-child) {
-        margin-bottom: 64px;
+        margin-bottom: var(--content-padding);
       }
 
       a {
@@ -153,6 +155,11 @@
       .info {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .info picture * {
+        max-width: 80vw;
       }
 
       @media screen and (max-width: 1200px) {
@@ -170,8 +177,8 @@
           font-size: 7px;
         }
 
-        main {
-          padding: 32px;
+        :root {
+          --content-padding: 32px;
         }
       }
 
@@ -180,8 +187,8 @@
           font-size: 2vw;
         }
 
-        main {
-          padding: 16px;
+        :root {
+          --content-padding: 16px;
         }
 
         .avatar {
